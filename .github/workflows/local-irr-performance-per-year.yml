@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - local/irr-performance-per-year
+      - local/6053_IRR
 
 jobs:
   build:
@@ -46,11 +46,11 @@ jobs:
           APP="$(find portfolio-product/target/products -type d -path '*/macosx/cocoa/aarch64/PortfolioPerformance.app' -print -quit)"
           test -n "$APP"
           echo "Packaging $APP"
-          tar -C "$(dirname "$APP")" -czf PortfolioPerformance-IRR-PerformancePerYear-macos-aarch64.tar.gz PortfolioPerformance.app
+          tar -C "$(dirname "$APP")" -czf PortfolioPerformance-6053-IRR-macos-aarch64.tar.gz PortfolioPerformance.app
 
       - name: Upload macOS ARM64 app
         uses: actions/upload-artifact@v4
         with:
-          name: PortfolioPerformance-IRR-PerformancePerYear-macos-aarch64
-          path: PortfolioPerformance-IRR-PerformancePerYear-macos-aarch64.tar.gz
+          name: PortfolioPerformance-6053-IRR-macos-aarch64
+          path: PortfolioPerformance-6053-IRR-macos-aarch64.tar.gz
           if-no-files-found: error
