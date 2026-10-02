@@ -5,6 +5,7 @@ public interface UIConstants
     interface Part // NOSONAR
     {
         String PORTFOLIO = "name.abuchen.portfolio.ui.part.portfolio"; //$NON-NLS-1$
+        String WELCOME = "name.abuchen.portfolio.ui.part.welcome"; //$NON-NLS-1$
         String ERROR_LOG = "name.abuchen.portfolio.ui.part.errorlog"; //$NON-NLS-1$
         String TEXT_VIEWER = "name.abuchen.portfolio.ui.part.textviewer"; //$NON-NLS-1$
     }
@@ -297,6 +298,12 @@ public interface UIConstants
          * Preference for directory from which to import PDF files
          */
         String PDF_IMPORT_PATH = "PDF_IMPORT_PATH"; //$NON-NLS-1$
+
+        /**
+         * Preference for directory from which to import text files extracted
+         * from PDF documents
+         */
+        String PDF_TEXT_IMPORT_PATH = "PDF_TEXT_IMPORT_PATH"; //$NON-NLS-1$
 
         /**
          * Preference for directory from which to import CSV files
